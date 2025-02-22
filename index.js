@@ -48,6 +48,18 @@ botaAdicionar.addEventListener('click', (evento) =>{
 
   listaDeCompras.appendChild(itemDaLista)
 
-  
-
+  verificarListaVazia()
 })
+
+const mensagemListaVazia = document.querySelector(".mensagem-lista-vazia")
+
+function verificarListaVazia(){
+  const itensDaLista = listaDeCompras.querySelectorAll("li")
+  if(itensDaLista.length === 0){
+    mensagemListaVazia.style.display = "block" //faz com que apareca na tela
+  }
+  else{
+    mensagemListaVazia.style.display = "none"
+  }
+}
+verificarListaVazia()
